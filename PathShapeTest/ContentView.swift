@@ -3,6 +3,12 @@ import SwiftUI
 
 extension Path {
 
+    init(elements: [Element]) {
+        self.init { path in
+            elements.forEach { path.append($0) }
+        }
+    }
+
     mutating func append(_ element: Element) {
 
         switch element {
@@ -69,10 +75,14 @@ extension Path.Element {
 struct RelativePath: Shape {
 
     private let relativePath: Path
-    public init(_ callback: (inout Path) -> ()) {
+    init(_ callback: (inout Path) -> ()) {
         var path = Path ()
         callback(&path)
         relativePath = path
+    }
+
+    init(elements: [Path.Element]) {
+        relativePath = Path(elements: elements)
     }
 
     func path(in rect: CGRect) -> Path {
@@ -91,12 +101,12 @@ struct RelativePath: Shape {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        RelativePath { path in
-            path.move(to: .init(x: 0, y: 0))
-            path.addLine(to: .init(x: 1, y: 1))
-            path.addLine(to: .init(x: 1, y: 0))
-            path.closeSubpath()
-        }
+        RelativePath(elements: [
+            .move(to: CGPoint(x: 0, y: 0)),
+            .line(to: CGPoint(x: 1, y: 1)),
+            .line(to: CGPoint(x: 1, y: 0)),
+            .closeSubpath
+        ])
         .fill(Color.orange)
         .frame(width: 400, height: 200, alignment: .bottom)
     }
