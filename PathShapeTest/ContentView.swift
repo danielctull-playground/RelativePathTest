@@ -1,6 +1,48 @@
 
 import SwiftUI
 
+struct RelativePath: Shape {
+
+    private let relativePath: Path
+
+    init(_ callback: (inout Path) -> ()) {
+        var path = Path ()
+        callback(&path)
+        relativePath = path
+    }
+
+    init(elements: [Path.Element]) {
+        relativePath = Path(elements: elements)
+    }
+
+    func path(in rect: CGRect) -> Path {
+
+        relativePath.map { element in
+
+            element.map { point in
+
+                CGPoint(x: rect.origin.x + point.x * rect.size.width,
+                        y: rect.origin.y + point.y * rect.size.height)
+            }
+        }
+    }
+}
+
+#if DEBUG
+struct ContentView_Previews : PreviewProvider {
+    static var previews: some View {
+        RelativePath(elements: [
+            .move(to: CGPoint(x: 0, y: 0)),
+            .line(to: CGPoint(x: 1, y: 1)),
+            .line(to: CGPoint(x: 1, y: 0)),
+            .closeSubpath
+        ])
+        .fill(Color.orange)
+        .frame(width: 400, height: 200, alignment: .bottom)
+    }
+}
+#endif
+
 extension Path {
 
     init(elements: [Element]) {
@@ -71,44 +113,3 @@ extension Path.Element {
         }
     }
 }
-
-struct RelativePath: Shape {
-
-    private let relativePath: Path
-    init(_ callback: (inout Path) -> ()) {
-        var path = Path ()
-        callback(&path)
-        relativePath = path
-    }
-
-    init(elements: [Path.Element]) {
-        relativePath = Path(elements: elements)
-    }
-
-    func path(in rect: CGRect) -> Path {
-
-        relativePath.map { element in
-
-            element.map { point in
-
-                CGPoint(x: rect.origin.x + point.x * rect.size.width,
-                        y: rect.origin.y + point.y * rect.size.height)
-            }
-        }
-    }
-}
-
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        RelativePath(elements: [
-            .move(to: CGPoint(x: 0, y: 0)),
-            .line(to: CGPoint(x: 1, y: 1)),
-            .line(to: CGPoint(x: 1, y: 0)),
-            .closeSubpath
-        ])
-        .fill(Color.orange)
-        .frame(width: 400, height: 200, alignment: .bottom)
-    }
-}
-#endif
