@@ -12,6 +12,7 @@
 		246F539322B56EFD00791E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246F539222B56EFD00791E70 /* Assets.xcassets */; };
 		246F539622B56EFD00791E70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246F539522B56EFD00791E70 /* Preview Assets.xcassets */; };
 		246F539922B56EFD00791E70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246F539722B56EFD00791E70 /* Main.storyboard */; };
+		24C27D8922B56F9C0016D2D5 /* RelativePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C27D8822B56F9C0016D2D5 /* RelativePath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		246F539822B56EFD00791E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		246F539A22B56EFD00791E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		246F539B22B56EFD00791E70 /* RelativePathTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RelativePathTest.entitlements; sourceTree = "<group>"; };
+		24C27D8822B56F9C0016D2D5 /* RelativePath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelativePath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				246F538E22B56EFD00791E70 /* AppDelegate.swift */,
 				246F539022B56EFD00791E70 /* ContentView.swift */,
+				24C27D8822B56F9C0016D2D5 /* RelativePath.swift */,
 				246F539222B56EFD00791E70 /* Assets.xcassets */,
 				246F539722B56EFD00791E70 /* Main.storyboard */,
 				246F539A22B56EFD00791E70 /* Info.plist */,
@@ -147,6 +150,7 @@
 			files = (
 				246F539122B56EFD00791E70 /* ContentView.swift in Sources */,
 				246F538F22B56EFD00791E70 /* AppDelegate.swift in Sources */,
+				24C27D8922B56F9C0016D2D5 /* RelativePath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
