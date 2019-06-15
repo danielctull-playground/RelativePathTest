@@ -1,6 +1,41 @@
 
 import SwiftUI
 
+extension Path {
+
+    mutating func append(_ element: Element) {
+
+        switch element {
+
+        case let .move(to):
+            move(to: to)
+
+        case let .line(to):
+            addLine(to: to)
+
+        case let .quadCurve(to, control):
+            addQuadCurve(to: to, control: control)
+
+        case let .curve(to, control1, control2):
+            addCurve(to: to, control1: control1, control2: control2)
+
+        case .closeSubpath:
+            closeSubpath()
+
+        @unknown default:
+            break
+        }
+    }
+
+    func map(_ transform: (Element) -> Element) -> Path {
+        Path { path in
+            forEach { element in
+                path.append(transform(element))
+            }
+        }
+    }
+}
+
 struct RelativePath: Shape {
 
     private let relative: Path
@@ -17,34 +52,30 @@ struct RelativePath: Shape {
                     y: rect.origin.y + point.y * rect.size.height)
         }
 
-        return Path { absolute in
+        return relative.map { element in
 
-            relative.forEach { element in
+            switch element {
+            case let .move(to):
+                return .move(to: convert(to))
 
-                switch element {
-                case let .move(to):
-                    absolute.move(to: convert(to))
+            case let .line(to):
+                return .line(to: convert(to))
 
-                case let .line(to):
-                    absolute.addLine(to: convert(to))
+            case let .quadCurve(to, control):
+                return .quadCurve(to: convert(to),
+                                  control: convert(control))
 
-                case let .quadCurve(to, control):
-                    absolute.addQuadCurve(to: convert(to),
-                                          control: convert(control))
+            case let .curve(to, control1, control2):
+                return .curve(to: convert(to),
+                              control1: convert(control1),
+                              control2: convert(control2))
 
-                case let .curve(to, control1, control2):
-                    absolute.addCurve(to: convert(to),
-                                      control1: convert(control1),
-                                      control2: convert(control2))
+            case .closeSubpath:
+                return .closeSubpath
 
-                case .closeSubpath:
-                    absolute.closeSubpath()
-
-                @unknown default:
-                    break
-                }
+            @unknown default:
+                fatalError()
             }
-
         }
     }
 }
