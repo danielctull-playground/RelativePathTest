@@ -36,45 +36,53 @@ extension Path {
     }
 }
 
+extension Path.Element {
+
+    func map(_ transform: (CGPoint) -> CGPoint) -> Path.Element {
+
+        switch self {
+
+        case let .move(to):
+            return .move(to: transform(to))
+
+        case let .line(to):
+            return .line(to: transform(to))
+
+        case let .quadCurve(to, control):
+            return .quadCurve(to: transform(to),
+                              control: transform(control))
+
+        case let .curve(to, control1, control2):
+            return .curve(to: transform(to),
+                          control1: transform(control1),
+                          control2: transform(control2))
+
+        case .closeSubpath:
+            return .closeSubpath
+
+        @unknown default:
+            fatalError()
+        }
+    }
+}
+
 struct RelativePath: Shape {
 
-    private let relative: Path
+    private let relativePath: Path
     public init(_ callback: (inout Path) -> ()) {
         var path = Path ()
         callback(&path)
-        relative = path
+        relativePath = path
     }
 
     func path(in rect: CGRect) -> Path {
 
-        func convert(_ point: CGPoint) -> CGPoint {
-            CGPoint(x: rect.origin.x + point.x * rect.size.width,
-                    y: rect.origin.y + point.y * rect.size.height)
-        }
+        relativePath.map { element in
 
-        return relative.map { element in
+            element.map { point in
 
-            switch element {
-            case let .move(to):
-                return .move(to: convert(to))
-
-            case let .line(to):
-                return .line(to: convert(to))
-
-            case let .quadCurve(to, control):
-                return .quadCurve(to: convert(to),
-                                  control: convert(control))
-
-            case let .curve(to, control1, control2):
-                return .curve(to: convert(to),
-                              control1: convert(control1),
-                              control2: convert(control2))
-
-            case .closeSubpath:
-                return .closeSubpath
-
-            @unknown default:
-                fatalError()
+                CGPoint(x: rect.origin.x + point.x * rect.size.width,
+                        y: rect.origin.y + point.y * rect.size.height)
             }
         }
     }
