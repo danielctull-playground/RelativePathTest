@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:PathShapeTest.xcodeproj">
+      location = "self:RelativePathTest.xcodeproj">
    </FileRef>
 </Workspace>

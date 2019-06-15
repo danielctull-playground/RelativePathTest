@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2422707922B55F0600F1B596 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422707822B55F0600F1B596 /* AppDelegate.swift */; };
-		2422707B22B55F0600F1B596 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2422707A22B55F0600F1B596 /* ContentView.swift */; };
-		2422707D22B55F0700F1B596 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2422707C22B55F0700F1B596 /* Assets.xcassets */; };
-		2422708022B55F0700F1B596 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2422707F22B55F0700F1B596 /* Preview Assets.xcassets */; };
-		2422708322B55F0700F1B596 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2422708122B55F0700F1B596 /* Main.storyboard */; };
+		246F538F22B56EFD00791E70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246F538E22B56EFD00791E70 /* AppDelegate.swift */; };
+		246F539122B56EFD00791E70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246F539022B56EFD00791E70 /* ContentView.swift */; };
+		246F539322B56EFD00791E70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246F539222B56EFD00791E70 /* Assets.xcassets */; };
+		246F539622B56EFD00791E70 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 246F539522B56EFD00791E70 /* Preview Assets.xcassets */; };
+		246F539922B56EFD00791E70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 246F539722B56EFD00791E70 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2422707522B55F0600F1B596 /* PathShapeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PathShapeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2422707822B55F0600F1B596 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2422707A22B55F0600F1B596 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		2422707C22B55F0700F1B596 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2422707F22B55F0700F1B596 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		2422708222B55F0700F1B596 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2422708422B55F0700F1B596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2422708522B55F0700F1B596 /* PathShapeTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PathShapeTest.entitlements; sourceTree = "<group>"; };
+		246F538B22B56EFD00791E70 /* RelativePathTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelativePathTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		246F538E22B56EFD00791E70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		246F539022B56EFD00791E70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		246F539222B56EFD00791E70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		246F539522B56EFD00791E70 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		246F539822B56EFD00791E70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		246F539A22B56EFD00791E70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		246F539B22B56EFD00791E70 /* RelativePathTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RelativePathTest.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2422707222B55F0600F1B596 /* Frameworks */ = {
+		246F538822B56EFD00791E70 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,40 +36,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2422706C22B55F0600F1B596 = {
+		246F538222B56EFD00791E70 = {
 			isa = PBXGroup;
 			children = (
-				2422707722B55F0600F1B596 /* PathShapeTest */,
-				2422707622B55F0600F1B596 /* Products */,
+				246F538D22B56EFD00791E70 /* RelativePathTest */,
+				246F538C22B56EFD00791E70 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		2422707622B55F0600F1B596 /* Products */ = {
+		246F538C22B56EFD00791E70 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2422707522B55F0600F1B596 /* PathShapeTest.app */,
+				246F538B22B56EFD00791E70 /* RelativePathTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2422707722B55F0600F1B596 /* PathShapeTest */ = {
+		246F538D22B56EFD00791E70 /* RelativePathTest */ = {
 			isa = PBXGroup;
 			children = (
-				2422707822B55F0600F1B596 /* AppDelegate.swift */,
-				2422707A22B55F0600F1B596 /* ContentView.swift */,
-				2422707C22B55F0700F1B596 /* Assets.xcassets */,
-				2422708122B55F0700F1B596 /* Main.storyboard */,
-				2422708422B55F0700F1B596 /* Info.plist */,
-				2422708522B55F0700F1B596 /* PathShapeTest.entitlements */,
-				2422707E22B55F0700F1B596 /* Preview Content */,
+				246F538E22B56EFD00791E70 /* AppDelegate.swift */,
+				246F539022B56EFD00791E70 /* ContentView.swift */,
+				246F539222B56EFD00791E70 /* Assets.xcassets */,
+				246F539722B56EFD00791E70 /* Main.storyboard */,
+				246F539A22B56EFD00791E70 /* Info.plist */,
+				246F539B22B56EFD00791E70 /* RelativePathTest.entitlements */,
+				246F539422B56EFD00791E70 /* Preview Content */,
 			);
-			path = PathShapeTest;
+			path = RelativePathTest;
 			sourceTree = "<group>";
 		};
-		2422707E22B55F0700F1B596 /* Preview Content */ = {
+		246F539422B56EFD00791E70 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				2422707F22B55F0700F1B596 /* Preview Assets.xcassets */,
+				246F539522B56EFD00791E70 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -77,39 +77,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2422707422B55F0600F1B596 /* PathShapeTest */ = {
+		246F538A22B56EFD00791E70 /* RelativePathTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2422708822B55F0700F1B596 /* Build configuration list for PBXNativeTarget "PathShapeTest" */;
+			buildConfigurationList = 246F539E22B56EFD00791E70 /* Build configuration list for PBXNativeTarget "RelativePathTest" */;
 			buildPhases = (
-				2422707122B55F0600F1B596 /* Sources */,
-				2422707222B55F0600F1B596 /* Frameworks */,
-				2422707322B55F0600F1B596 /* Resources */,
+				246F538722B56EFD00791E70 /* Sources */,
+				246F538822B56EFD00791E70 /* Frameworks */,
+				246F538922B56EFD00791E70 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = PathShapeTest;
-			productName = PathShapeTest;
-			productReference = 2422707522B55F0600F1B596 /* PathShapeTest.app */;
+			name = RelativePathTest;
+			productName = RelativePathTest;
+			productReference = 246F538B22B56EFD00791E70 /* RelativePathTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2422706D22B55F0600F1B596 /* Project object */ = {
+		246F538322B56EFD00791E70 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Daniel Tull";
 				TargetAttributes = {
-					2422707422B55F0600F1B596 = {
+					246F538A22B56EFD00791E70 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = 2422707022B55F0600F1B596 /* Build configuration list for PBXProject "PathShapeTest" */;
+			buildConfigurationList = 246F538622B56EFD00791E70 /* Build configuration list for PBXProject "RelativePathTest" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,46 +117,46 @@
 				en,
 				Base,
 			);
-			mainGroup = 2422706C22B55F0600F1B596;
-			productRefGroup = 2422707622B55F0600F1B596 /* Products */;
+			mainGroup = 246F538222B56EFD00791E70;
+			productRefGroup = 246F538C22B56EFD00791E70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2422707422B55F0600F1B596 /* PathShapeTest */,
+				246F538A22B56EFD00791E70 /* RelativePathTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2422707322B55F0600F1B596 /* Resources */ = {
+		246F538922B56EFD00791E70 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2422708322B55F0700F1B596 /* Main.storyboard in Resources */,
-				2422708022B55F0700F1B596 /* Preview Assets.xcassets in Resources */,
-				2422707D22B55F0700F1B596 /* Assets.xcassets in Resources */,
+				246F539922B56EFD00791E70 /* Main.storyboard in Resources */,
+				246F539622B56EFD00791E70 /* Preview Assets.xcassets in Resources */,
+				246F539322B56EFD00791E70 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2422707122B55F0600F1B596 /* Sources */ = {
+		246F538722B56EFD00791E70 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2422707B22B55F0600F1B596 /* ContentView.swift in Sources */,
-				2422707922B55F0600F1B596 /* AppDelegate.swift in Sources */,
+				246F539122B56EFD00791E70 /* ContentView.swift in Sources */,
+				246F538F22B56EFD00791E70 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2422708122B55F0700F1B596 /* Main.storyboard */ = {
+		246F539722B56EFD00791E70 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2422708222B55F0700F1B596 /* Base */,
+				246F539822B56EFD00791E70 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -164,7 +164,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2422708622B55F0700F1B596 /* Debug */ = {
+		246F539C22B56EFD00791E70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -224,7 +224,7 @@
 			};
 			name = Debug;
 		};
-		2422708722B55F0700F1B596 /* Release */ = {
+		246F539D22B56EFD00791E70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,45 +277,45 @@
 			};
 			name = Release;
 		};
-		2422708922B55F0700F1B596 /* Debug */ = {
+		246F539F22B56EFD00791E70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PathShapeTest/PathShapeTest.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RelativePathTest/RelativePathTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "PathShapeTest/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "RelativePathTest/Preview\\ Content";
 				DEVELOPMENT_TEAM = B2M757K4LG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PathShapeTest/Info.plist;
+				INFOPLIST_FILE = RelativePathTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.danieltull.PathShapeTest;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.danieltull.RelativePathTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		2422708A22B55F0700F1B596 /* Release */ = {
+		246F53A022B56EFD00791E70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = PathShapeTest/PathShapeTest.entitlements;
+				CODE_SIGN_ENTITLEMENTS = RelativePathTest/RelativePathTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "PathShapeTest/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "RelativePathTest/Preview\\ Content";
 				DEVELOPMENT_TEAM = B2M757K4LG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PathShapeTest/Info.plist;
+				INFOPLIST_FILE = RelativePathTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = uk.co.danieltull.PathShapeTest;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.co.danieltull.RelativePathTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -324,25 +324,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2422707022B55F0600F1B596 /* Build configuration list for PBXProject "PathShapeTest" */ = {
+		246F538622B56EFD00791E70 /* Build configuration list for PBXProject "RelativePathTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2422708622B55F0700F1B596 /* Debug */,
-				2422708722B55F0700F1B596 /* Release */,
+				246F539C22B56EFD00791E70 /* Debug */,
+				246F539D22B56EFD00791E70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2422708822B55F0700F1B596 /* Build configuration list for PBXNativeTarget "PathShapeTest" */ = {
+		246F539E22B56EFD00791E70 /* Build configuration list for PBXNativeTarget "RelativePathTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2422708922B55F0700F1B596 /* Debug */,
-				2422708A22B55F0700F1B596 /* Release */,
+				246F539F22B56EFD00791E70 /* Debug */,
+				246F53A022B56EFD00791E70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2422706D22B55F0600F1B596 /* Project object */;
+	rootObject = 246F538322B56EFD00791E70 /* Project object */;
 }
