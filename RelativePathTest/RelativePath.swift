@@ -6,7 +6,7 @@ struct RelativePath: Shape {
     private let relativePath: Path
 
     init(_ callback: (inout Path) -> ()) {
-        var path = Path ()
+        var path = Path()
         callback(&path)
         relativePath = path
     }
@@ -17,6 +17,7 @@ struct RelativePath: Shape {
 
     func path(in rect: CGRect) -> Path {
 
+        // Return a path with absolute points relative to the given rect.
         relativePath.map { element in
 
             element.map { point in
@@ -32,12 +33,18 @@ struct RelativePath: Shape {
 
 extension Path {
 
+    /// Creates a path using an array of Path.Element.
+    ///
+    /// - Parameter elements: An array of elements.
     init(elements: [Element]) {
         self.init { path in
             elements.forEach { path.append($0) }
         }
     }
 
+    /// Append the element to the path.
+    ///
+    /// - Parameter element: The element to append.
     mutating func append(_ element: Element) {
 
         switch element {
@@ -62,6 +69,9 @@ extension Path {
         }
     }
 
+    /// Transform the path's elements.
+    ///
+    /// - Parameter transform: The function to use to transform each element.
     func map(_ transform: (Element) -> Element) -> Path {
         Path { path in
             forEach { element in
@@ -73,6 +83,9 @@ extension Path {
 
 extension Path.Element {
 
+    /// Transform each point in each element.
+    ///
+    /// - Parameter transform: The function to use to transform each point.
     func map(_ transform: (CGPoint) -> CGPoint) -> Path.Element {
 
         switch self {
